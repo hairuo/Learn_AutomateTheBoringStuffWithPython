@@ -31,3 +31,20 @@
 
 - 局部和全局作用域
 - global语句
+
+## 第4章 列表
+
+- 列表，列表值（列表本身作为一个值）/list value，表项（列表中的值）/iterms： [1, 2, 3],  ['cat', 'bat', 'rat', 'elephant'], ['hello', 3.14159, True, None, 42]
+- 正负数下标， 切片/slice与子列表sublist: spam = ['cat', 'bat', 'rat', 'elephant'], spam[0:-1]==['cat', 'bat', 'rat']， btw, 发现切片不允许表项数据类型不同。
+- len(spam) == 4, len('abc') == 3
+- 列表连接使用+操作符(list concatenation)，删除列表中下标处的值用del语句： del spam[2]
+- 对列表supplies的循环使用技巧, 使用语句for in in range(len(supplies)), str(i), supplies[i]
+- in和not in操作符
+- 多重赋值技巧： cat = ['fat', 'black', 'loud'], size, color, disposition = cat
+- 增强的赋值操作： spam += 1, spam -=1, spam *=1, spam /= 1, spam %= 1
+- 方法/methods只能在列表上调用:  index(), append(), insert()， remove(), sort(), sort默认按ASCII字符顺序排序字幕顺序需要设置关键字参数key为spam.sort(key=str.lower)
+- 类似列表的类型（但不能修改、添加或删除）：字符串， 元组/tuple, tuple采用圆括号代替方括号
+- 用list()和tuple函数来转换类型
+- 变量包含对列表值的引用，而不是列表值本身；而对于字符串和整数值，变量包含了字符串或整数值
+- 4.7.1 传递引用： eggs()被调用时，没有使用返回值来为spam赋新值，因为eggs(spam)只是相当于让someParameter指向spam的列表，但由于someParameter和spam同时指向列表，因此对列表的.append操作修改了列表的内容。这是列表和元组或字符串等一般变量的不同之处。
+- copy模块的用法: copy.copy(), copy.deepcopy()
