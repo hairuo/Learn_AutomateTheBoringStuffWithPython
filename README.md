@@ -1,4 +1,4 @@
-学习笔记: 《Python编程快速上手--让繁琐工作自动化》， 英文名《Automate the boring stuff with Python》
+学习笔记: 《Python编程快速上手--让繁琐工作自动化》， 英文名《Automate the boring stuff with Python》[英文原版在线免费阅读](https://automatetheboringstuff.com/)
 
 使用编程软件: Anaconda, PyCharm/Sublime Text
 
@@ -48,3 +48,25 @@
 - 变量包含对列表值的引用，而不是列表值本身；而对于字符串和整数值，变量包含了字符串或整数值
 - 4.7.1 传递引用： eggs()被调用时，没有使用返回值来为spam赋新值，因为eggs(spam)只是相当于让someParameter指向spam的列表，但由于someParameter和spam同时指向列表，因此对列表的.append操作修改了列表的内容。这是列表和元组或字符串等一般变量的不同之处。
 - copy模块的用法: copy.copy(), copy.deepcopy()
+
+## 第5章 字典和结构化数据
+
+- 字典数据类型：键-值
+- 字典(example: spam)与列表：
+  - if color in spam.keys():
+  - of colorin spam.values()
+  - if color in spam // means spam.keys()
+  - list(spam.keys())
+- keys(), values(), iterms()
+  - for v in spam.values():
+  - for k in spam.keys():
+  - for i in spam.items():
+- get()方法有两个参数, 第一个是要**取值**的键，第二个是如果该键不存在时，**返回**的备用值: str(spam.get('xxx', 0))，不使用get()而字典没有相应的键时，程序运行会产生错误消息。
+- setdefaut()方法有两个参数，第一个是要检查的键，第二个是如果该键不存在时要**设置**的值: spam.setdefault('color', 'black')，可以确保一个键存在的快捷方式。//get()和setdefault()的区别参见[这里](https://stackoverflow.com/questions/7423428/python-dict-get-vs-setdefault)。
+- 漂亮打印pprint模块：pprint.pprint(), pprint.pformat()
+- 使用**数据结构**对真实世界建模: 井字棋游戏为例
+- 嵌套的(nested)字典和列表
+  - for k, v in guests.items():
+    - numBrought = numBrought + v.get(item, 0)
+- 
+
