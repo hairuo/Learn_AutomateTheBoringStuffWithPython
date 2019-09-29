@@ -32,7 +32,7 @@
 - 局部和全局作用域
 - global语句
 
-## 第4章 列表
+## 第04章 列表
 
 - 列表，列表值（列表本身作为一个值）/list value，表项（列表中的值）/iterms： [1, 2, 3],  ['cat', 'bat', 'rat', 'elephant'], ['hello', 3.14159, True, None, 42]
 - 正负数下标， 切片/slice与子列表sublist: spam = ['cat', 'bat', 'rat', 'elephant'], spam[0:-1]==['cat', 'bat', 'rat']， btw, 发现切片不允许表项数据类型不同。
@@ -49,7 +49,7 @@
 - 4.7.1 传递引用： eggs()被调用时，没有使用返回值来为spam赋新值，因为eggs(spam)只是相当于让someParameter指向spam的列表，但由于someParameter和spam同时指向列表，因此对列表的.append操作修改了列表的内容。这是列表和元组或字符串等一般变量的不同之处。
 - copy模块的用法: copy.copy(), copy.deepcopy()
 
-## 第5章 字典和结构化数据
+## 第05章 字典和结构化数据
 
 - 字典数据类型：键-值
 - 字典(example: spam)与列表：
@@ -68,5 +68,8 @@
 - 嵌套的(nested)字典和列表
   - for k, v in guests.items():
     - numBrought = numBrought + v.get(item, 0)
+
+## 第06章 字符串操作
+
 - 
 
