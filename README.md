@@ -55,7 +55,7 @@
 
 - 字典(example: spam)与列表：
   
-  ```
+  ```python
   if color in spam.keys():
   if color in spam.values():
   if color in spam: // means spam.keys()
@@ -91,5 +91,38 @@
 
 ## 第06章 字符串操作
 
-- 
+- 转义字符:  \t制表符, \n换行符, \\倒斜杠, \\\`单引号， \\"双引号
 
+- 原始字符串，在引号之前加r 。用于正则表达式字符串很有用。
+
+  ``` python
+  >>> print(r'That is Carol\'s cat.'')
+  That is Carol\'s cat.
+  ```
+
+- 三重引号, 三个单引号或三个双引号作为起止。其间所有的引号、制表符或**换行符**(不需要额外敲入`\n`)都视为字符串的一部分。
+
+- 注释单行用#，多行用三重双引号作为起止
+
+- 无论spam是列表，字符串还是元祖/tuple，切片读取的代码都是spam[]格式，in和not in操作符同样可用
+
+- 字符串方法`.upper()`, `.lower()`, `.isupper()`, `.islower()`, `.isalpha()`, `.isalnum()`, `.isdecimal()`, `.isspace()`, `.istitlle()`, `.startswith()`, `endswith()`, `.join()`, `.split()`, `.rjust()`, `.ljust()`, `.center()`, `.strip()`, `.rstrip()`, `.lstrip()`,
+
+- 用pyperclip模块拷贝粘贴字符串
+
+  ``` python  
+  >>> import pyerclip
+  >>> pyerclip.copy('Hello world!')
+  >>> pyerclip.paste()
+  'Hello world!'
+  ```
+  
+  - 安装第三方模块pyperclip的方法，Windows下使用Anaconda的Python，可以打开anaconda prompt输入pip install pyperclip即可， Mac同理
+
+- 项目“口令保管箱”程序pw.py运行FAQ:
+
+  - 可以将路径改成Anaconda的python.exe所在路径，参考附录B的做法添加到环境变量中的PATH
+  - 路径名称中的目录名（或者可能包括用户名）有空格，可以将整条路径语句用双引号前后包围起来。
+  - 注意pw.py代码的第一行中为`#!python3`，这里3和python之间没有空格，否则也会运行网上看到的其他人的运行问题：Can't open file... [Errno 2] No such file or directory
+  - 注意pw.bat中的代码最后结尾部分有`%*` ，用于表示输入任何变量，对应这里的account
+  - windows下输入pw email后，运行成功，可以ctrl+c查看效果，如果只输入pw，后面没有接email等任意账号，则会显示Usage开头的那条语句。
