@@ -126,3 +126,9 @@
   - 注意pw.py代码的第一行中为`#!python3`，这里3和python之间没有空格，否则也会运行网上看到的其他人的运行问题：Can't open file... [Errno 2] No such file or directory
   - 注意pw.bat中的代码最后结尾部分有`%*` ，用于表示输入任何变量，对应这里的account
   - windows下输入pw email后，运行成功，可以ctrl+c查看效果，如果只输入pw，后面没有接email等任意账号，则会显示Usage开头的那条语句。
+  
+- 项目“表格打印”编写FAQ:
+
+  - 不要用书中的生成列表方法`colWidths = [0] * len(tableData)`, 理由是因为`[[None]*n]*m` 这样的方式生成的列表, 里面的全部都这是引用, 都是同一个对象, 并不是m个对象! 因为你已经将多个引用复制到同一个对象。
+  - `for a in range(len(tableData)):`这样的语句不要错写成`for a in range(tableData):`或`for a in tableData:`
+
