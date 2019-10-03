@@ -27,7 +27,7 @@ for groups in phoneRegex.findall(text):
         phoneNum += ' x' + groups[8]
     matches.append(phoneNum)
 
-for group in emailRegex.findall(text):
+for groups in emailRegex.findall(text):
     matches.append(groups[0])
 
 if len(matches) > 0:
