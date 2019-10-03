@@ -1,6 +1,6 @@
 学习笔记: 《Python编程快速上手--让繁琐工作自动化》， 英文名《Automate the boring stuff with Python》[英文原版在线免费阅读](https://automatetheboringstuff.com/)
 
-使用编程软件: Anaconda, PyCharm CE/Sublime Text
+使用编程软件: [Anaconda](https://www.anaconda.com/distribution/), [PyCharm CE](https://www.jetbrains.com/pycharm/download/)/[Sublime Text](https://www.sublimetext.com/)
 
 # 第一部分 Python编程基础
 
@@ -77,7 +77,7 @@
 
 - 漂亮打印pprint模块：`pprint.pprint()`, `pprint.pformat()`
 
-- 使用**数据结构**对真实世界建模: 井字棋游戏为例
+- 使用[**数据结构**](https://zhuanlan.zhihu.com/p/23191006)对真实世界建模: 井字棋游戏为例
 
 - 嵌套的(nested)字典和列表
   
@@ -117,7 +117,7 @@
   'Hello world!'
   ```
   
-  - 安装第三方模块pyperclip的方法，Windows下使用Anaconda的Python，可以打开anaconda prompt输入pip install pyperclip即可， Mac同理
+  - 安装第三方模块pyperclip的方法，Windows下使用Anaconda，可以打开anaconda prompt输入`pip install pyperclip`即可， Mac下终端输入: `conda install -c conda-forge pyperclip`, 等待响应`Collecting package metadata (repodata.json): done`等之后即可。如果输入`pip install pyperclip`则仅仅是给Mac自带的python程序安装该包，与Anaconda无关。
 
 - 项目“口令保管箱”程序pw.py运行FAQ:
 
@@ -132,3 +132,20 @@
   - 不要用书中的生成列表方法`colWidths = [0] * len(tableData)`, 理由是因为`[[None]*n]*m` 这样的方式生成的列表, 里面的全部都这是引用, 都是同一个对象, 并不是m个对象! 因为你已经将多个引用复制到同一个对象。
   - `for a in range(len(tableData)):`这样的语句不要错写成`for a in range(tableData):`或`for a in tableData:`
 
+# 第二部分 自动化任务
+
+## 第07章 模式匹配与正则表达式
+
+- 技术专家Cory Doctorow声称，甚至应该在教授编程之前，先教授正则表达式：知道正则表达式可能意味着用3步解决问题，而不是用3000步。(论vi正则表达式练习的重要性)
+
+- `import re`导入正则表达式块之后，使用`re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')`返回一个Regex(正则表达式)对象，这里re是regular express的缩写，compile表示编制、编译的意思，所以括号内是正则表达式，引号内的\d表示一个数字字符，而引号前加r表示将该字符串标记为原始字符串（见P97, 6.1.4），而非转义字符。
+
+- Regex对象的search()方法查找传入的字符串，返回一个Match对象，Match对象有一个group()方法返回匹配的文本。
+
+  ``` python
+  >>> phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+  >>> mo = phoneNumRegex.search('My number is 415-555-4242')
+  >>> print('Phone number found: ' + mo.group())
+  ```
+
+- 利用括号分组，管道匹配多个分组，问号实现可选匹配，星号匹配零次或多次，加号匹配一次或多次，花括号匹配特定次数。
