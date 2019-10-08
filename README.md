@@ -149,3 +149,4 @@
   ```
 
 - 利用括号分组，管道匹配多个分组，问号实现可选匹配，星号匹配零次或多次，加号匹配一次或多次，花括号匹配特定次数。
+- Pycharm设置解释器选项中的pyperclip安装包配置问题参见[这里](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360000083390-Unable-to-Import-pyperclip)。
