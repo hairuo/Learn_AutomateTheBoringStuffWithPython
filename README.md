@@ -1,6 +1,6 @@
 学习笔记: 《Python编程快速上手--让繁琐工作自动化》， 英文名《Automate the boring stuff with Python》[英文原版在线免费阅读](https://automatetheboringstuff.com/)
 
-使用编程软件: [Anaconda](https://www.anaconda.com/distribution/), [PyCharm CE](https://www.jetbrains.com/pycharm/download/)/[Sublime Text](https://www.sublimetext.com/)
+使用编程软件: [Anaconda](https://www.anaconda.com/distribution/)+[PyCharm CE](https://www.jetbrains.com/pycharm/download/), 备选: [Sublime Text](https://www.sublimetext.com/)
 
 # 第一部分 Python编程基础
 
@@ -150,3 +150,36 @@
 
 - 利用括号分组，管道匹配多个分组，问号实现可选匹配，星号匹配零次或多次，加号匹配一次或多次，花括号匹配特定次数。
 - Pycharm设置解释器选项中的pyperclip安装包配置问题参见[这里](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360000083390-Unable-to-Import-pyperclip)。
+
+
+---
+## Pycharm使用笔记
+### Pycharm Tutorial
+#### [Pycharm Tutorial #1 - Setup & Basics:](https://www.youtube.com/watch?v=56bPIGf4us0)
+- Shift + Alt + C: 查看文件修改记录
+
+### [Getting Started with PyCharm](https://www.youtube.com/watch?v=BPC-bGdBSM8&list=PLQ176FUIyIUZ1mwB-uImQE-gmkwzjNLjP)
+#### Quick Tour:
+
+### Tips for Vim:
+- 在PyCharm中启用或取消vim插件功能的快捷键: Ctrl + Alt + v
+- undo: u, 3u means undo last 3 times
+- redo: ctrl + r
+- search: /, and press n to locate the next words
+- :%s/old/new/gc: search all old and replace with new,  gc means greedily with confirm
+- :$/old/new: work in the first old with new in current line
+- :$/old/new/g: all in current line
+- :set nu
+- :set nonu
+- a, o, A, O, i, I, 0, ^, $, gg, G, nG, w, nw, W, h, nh, b, B,  n+, n-, x, nx, H, L
+- delete liens: dd, ndd, dW, d$, d0, d^, dG, dnG, dw, dW
+- cw
+- p, P
+- c
+- r, 5r, R
+- v, V
+- R
+- fx: find x in the current line
+- y, yy means ddP or copy current line, notice that dd means cut, not delete
+
+
