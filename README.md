@@ -116,8 +116,9 @@
   >>> pyerclip.paste()
   'Hello world!'
   ```
-  
+
   - 安装第三方模块pyperclip的方法，Windows下使用Anaconda，可以打开anaconda prompt输入`pip install pyperclip`即可， Mac下终端输入: `conda install -c conda-forge pyperclip`, 等待响应`Collecting package metadata (repodata.json): done`等之后即可。如果输入`pip install pyperclip`则仅仅是给Mac自带的python程序安装该包，与Anaconda无关。
+  - PyCharm设置解释器选项中的pyperclip安装包配置问题参见[这里](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360000083390-Unable-to-Import-pyperclip)。
 
 - 项目“口令保管箱”程序pw.py运行FAQ:
 
@@ -149,13 +150,29 @@
   ```
 
 - 利用括号分组，管道匹配多个分组，问号实现可选匹配，星号匹配零次或多次，加号匹配一次或多次，花括号匹配特定次数。
-- Pycharm设置解释器选项中的pyperclip安装包配置问题参见[这里](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360000083390-Unable-to-Import-pyperclip)。
 
+- 花括号匹配次数{}默认为贪心匹配模式，加?改为非贪心。
+
+- .findall()和.search()的区别，在于前者返回一个匹配字符串列表或字符串的元组的列表。
+
+- 字符分类\w, \W, \s, \S
+
+  ```python
+  >>> xmasRegex =re.complier(r'\d+\s\w+')   
+  >>> xmasRegex.findall('12 drummers, 11 pipers, 10 lords, 9 ladies, 8 maids, 7 swans, 6 geese, 4 birds, 3 hens, 2 doves, 1 partridge')
+  ['12 drummers', '11 pipers', '10 lords', '9 ladies', '8 maids', '7 swans', '6 geese', '4 birds', '3 hens', '2 doves', '1 partridge']
+  ```
+
+  这里```\d+\s\w+```表示一个或多个数字，接一个空白字符，接一个或多个字母/数字/下划线字符.
+
+  
+
+  
 
 ---
-## Pycharm使用笔记
-### Pycharm Tutorial
-#### [Pycharm Tutorial #1 - Setup & Basics:](https://www.youtube.com/watch?v=56bPIGf4us0)
+## PyCharm使用笔记
+### PyCharm Tutorial
+#### [PyCharm Tutorial #1 - Setup & Basics:](https://www.youtube.com/watch?v=56bPIGf4us0)
 - Shift + Alt + C: 查看文件修改记录
 
 ### [Getting Started with PyCharm](https://www.youtube.com/watch?v=BPC-bGdBSM8&list=PLQ176FUIyIUZ1mwB-uImQE-gmkwzjNLjP)
