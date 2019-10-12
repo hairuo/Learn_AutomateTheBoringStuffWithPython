@@ -165,20 +165,45 @@
 
   这里```\d+\s\w+```表示一个或多个数字，接一个空白字符，接一个或多个字母/数字/下划线字符.
 
+- 字符分类[aeiouAEIOU]将匹配所有元音字符，不论大小写。
+
+- 字符分类左方括号后加上一个插入字符^, 得到非字符类。
+
+- 开始匹配和结尾匹配, 在正则表达式开始处插入```^```，结尾处使用```$```
+
+- 通配字符: ```(.*)```匹配除换行外的所有字符，默认贪心模式。
+
+- .sub()方法替换字符串
+
+- 管理复杂的正则表达式, re.VERBOSE, re.IGNORECASE, re.DOTALL
+
+  
+
   
 
   
 
 ---
-## PyCharm使用笔记
-### PyCharm Tutorial
-#### [PyCharm Tutorial #1 - Setup & Basics:](https://www.youtube.com/watch?v=56bPIGf4us0)
+## 软件使用笔记
+### PyCharm
+
+| 参考内容:                                                    |
+| :----------------------------------------------------------- |
+| [PyCharm Tutorial #1 - Setup & Basics:](https://www.youtube.com/watch?v=56bPIGf4us0) |
+| [Getting Started with PyCharm](https://www.youtube.com/watch?v=BPC-bGdBSM8&list=PLQ176FUIyIUZ1mwB-uImQE-gmkwzjNLjP) |
+
 - Shift + Alt + C: 查看文件修改记录
 
-### [Getting Started with PyCharm](https://www.youtube.com/watch?v=BPC-bGdBSM8&list=PLQ176FUIyIUZ1mwB-uImQE-gmkwzjNLjP)
-#### Quick Tour:
 
-### Tips for Vim:
+
+### Vim
+
+| 参考内容:                                                    |
+| :----------------------------------------------------------- |
+| [简明 VIM 练级攻略](https://coolshell.cn/articles/5426.html) |
+| [VIM总结之一: VIM编辑器常用命令详解](https://blog.csdn.net/mountzf/article/details/51741639) |
+
+
 - 在PyCharm中启用或取消vim插件功能的快捷键: Ctrl + Alt + v
 - undo: u, 3u means undo last 3 times
 - redo: ctrl + r
@@ -188,15 +213,17 @@
 - :$/old/new/g: all in current line
 - :set nu
 - :set nonu
-- a, o, A, O, i, I, 0, ^, $, gg, G, nG, w, nw, W, h, nh, b, B,  n+, n-, x, nx, H, L
-- delete liens: dd, ndd, dW, d$, d0, d^, dG, dnG, dw, dW
+- a, o, A, O, i, I, 0, ^, $, gg, G, nG, h, nh,  n+, n-, x, nx, H, L
+- dd, ndd, dW, d$, d0, d^, dG, dnG, dw, dW: delete lines
 - cw
-- p, P
+- p, P: paste
 - c
 - r, 5r, R
-- v, V
+- v, V: visualize and select
 - R
 - fx: find x in the current line
-- y, yy means ddP or copy current line, notice that dd means cut, not delete
+- y, yy: means ddP or copy current line, notice that dd means cut, not delete
+- b, w, e, B, nw, W: jump words
+- 
 
 
