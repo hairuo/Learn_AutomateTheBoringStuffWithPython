@@ -1,6 +1,8 @@
 学习笔记: 《Python编程快速上手--让繁琐工作自动化》， 英文名《Automate the boring stuff with Python》[英文原版在线免费阅读](https://automatetheboringstuff.com/)
 
-使用编程软件: [Anaconda](https://www.anaconda.com/distribution/)+[PyCharm CE](https://www.jetbrains.com/pycharm/download/), 备选: [Sublime Text](https://www.sublimetext.com/)
+使用编程软件: [Anaconda](https://www.anaconda.com/distribution/) + [PyCharm CE](https://www.jetbrains.com/pycharm/download/), 备选: [Sublime Text](https://www.sublimetext.com/)
+
+辅助app: SoloLearn
 
 # 第一部分 Python编程基础
 
@@ -179,9 +181,13 @@
 
   
 
-  
+## 第08章 读写文件
 
-  
+- ```import os```模块, 这里[The **OS** module in **Python** provides a way of using **operating system** dependent functionality. The functions that the **OS** module provides allows you to interface with the underlying **operating system** that **Python** is running on – be that Windows, Mac or Linux.](https://www.pythonforbeginners.com/os/pythons-os-module#targetText=The%20OS%20module%20in%20Python,that%20Windows%2C%20Mac%20or%20Linux.)
+- os.path模块的完整文档在[Python网站上](https://docs.python.org/3/library/os.path.html)
+- 
+
+
 
 ---
 ## 软件使用笔记
