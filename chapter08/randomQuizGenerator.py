@@ -1,5 +1,5 @@
 #! python 3
-# chapt8_randomQuizGenrator.py - Creats quizzes with questions and answers in
+# randomQuizGenrator.py - Creats quizzes with questions and answers in
 # random order, along with the answer key.
 
 import random

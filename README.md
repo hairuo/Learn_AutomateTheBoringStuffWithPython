@@ -184,8 +184,56 @@
 ## 第08章 读写文件
 
 - ```import os```模块, 这里[The **OS** module in **Python** provides a way of using **operating system** dependent functionality. The functions that the **OS** module provides allows you to interface with the underlying **operating system** that **Python** is running on – be that Windows, Mac or Linux.](https://www.pythonforbeginners.com/os/pythons-os-module#targetText=The%20OS%20module%20in%20Python,that%20Windows%2C%20Mac%20or%20Linux.)
-- os.path模块的完整文档在[Python网站上](https://docs.python.org/3/library/os.path.html)
-- 
+
+- `os.path`模块的完整文档在[Python网站上](https://docs.python.org/3/library/os.path.html)
+
+- `os.getcwd()`获取当前工作目录。`os.chdir(path)`改变工作目录。`os.makedirs(path)`创建新文件夹。
+
+- 绝对路径和相对路径: `os.path.abspath(path)`,`os.path.isabs(path)`, `os.path.relpath(path, start)`最后一个相当于找出从start到path的相对路径字符串。
+
+- `os.path.basename(path)`路径的基本名称（最后一个目录或文件），`os.path.dirname(path)`路径的目录名称（最后一个目录和文件之前的所有路径全名）。`os.path.split(path)`相当于将前面的dirname和basename一分为二。
+
+- `os.path.getsize(path)`查看文件大小。`os.listdir(path)`查看文件夹内容。
+
+- 查看路径有效性：`os.path.exists(path)`, `os.path.isdir(path)`, `os.path.isfile(path)`
+
+- 文件读取的两种方法过程。
+  
+  - 打开一个已存在的文本文件hello.txt
+  
+  ```python
+  >>> helloFile = open('.../hello.txt')
+  >>> helloContent = helloFile.read()
+  >>> helloContent
+  `hello world!`
+  ```
+  
+  - 采用realines()方法:
+  
+  ```python
+  >>> sonnetFile = open('sonnet29.txt')
+  >>> sonnetFile.readlines()
+  ```
+
+- 写入文件
+
+  ```python
+  >>> baconFile = open('bacon.txt', 'w')
+  >>> baconFile.write('Hello world!\n')
+  13
+  >>> content = baconFile.read()
+  >>> baconFile.close()
+  >>> print(content)
+  ```
+
+  
+
+- 用shelve模块保存变量， `shelve.open('mydata')`，shelf值又keys()和values()方法。
+- 用pprint.pformat()函数保存变量。
+
+- 问题：函数和方法的区别是什么？ [回答:Difference between Method and Function in Python]( https://www.geeksforgeeks.org/difference-method-function-python/ )
+
+
 
 
 
